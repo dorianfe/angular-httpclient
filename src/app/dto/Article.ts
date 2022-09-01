@@ -1,4 +1,5 @@
 import {Categorie} from "./Categorie";
+import {Vendeur} from "./Vendeur";
 
 export interface Article {
 // private int noArticle;
@@ -21,4 +22,5 @@ export interface Article {
   prixVente: number;
   etatVente: string;
   categorie: Categorie;
+  vendeur: Vendeur;
 }

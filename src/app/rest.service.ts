@@ -9,7 +9,7 @@ import {Article} from "./dto/Article";
 })
 export class RestService {
 
-  endpoint = 'http://localhost:8080/articles';
+  endpoint = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) {
   }
@@ -38,7 +38,9 @@ export class RestService {
     );
   }
 
-  getProduct(noArticle: string): Observable<any> {
+
+//faire un get article
+  getArticle(noArticle: string): Observable<any> {
     return this.http.get<Article>(this.endpoint + 'articles/' + noArticle).pipe(
       catchError(this.handleError)
     );
