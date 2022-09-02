@@ -1,3 +1,5 @@
+
+<div id="information">
 <h2>Product List</h2>
 
 
@@ -6,8 +8,22 @@
   <li *ngFor="let a of articles; let i=index;">
 
     <h1>{{a.nomArticle}}</h1>
+    <p>{{a.categorie.libelle}}</p>
 
     <button class="delete" title="delete product"
             >x</button>
   </li>
 </ul>
+
+<div id="photo">
+
+  <img src="" alt="" style="float: left;">
+
+</div>
+
+
+  </div>
+
+
+
+
