@@ -38,11 +38,17 @@ export class RestService {
     );
   }
 
-
 //faire un get article
   getArticle(noArticle: string): Observable<any> {
     return this.http.get<Article>(this.endpoint + 'articles/' + noArticle).pipe(
       catchError(this.handleError)
     );
   }
+
+  ajouterArticle(article: Article): Observable<any> {
+    return this.http.post(this.endpoint + '/ajouterArticle', article).pipe(
+      catchError(this.handleError)
+    );
+  }
 }
+

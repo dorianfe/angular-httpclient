@@ -1,0 +1,16 @@
+<div>
+  <h2>Product Add</h2>
+  <div>
+    <label>arnticle Name:
+      <input [(ngModel)]="articleData.nomArticle" placeholder="Product Name"/>
+    </label><br>
+    <label>article categorie:
+      <!--mat progress spinner pour mettre l'utilisateur en attente-->
+      <input [(ngModel)]="articleData.categorie" placeholder="Product Description"/>
+    </label><br>
+    <label>article Price:
+      <input [(ngModel)]="articleData.prixVente" placeholder="Product Price"/>
+    </label><br>
+  </div>
+  <button (click)="ajouterArticle()">Save</button>
+</div>

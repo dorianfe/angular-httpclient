@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArticleComponent } from './article/article.component';
 import { FormsModule } from '@angular/forms';
 import { CategorieComponent } from './categorie/categorie.component';
+import { ArticleAddComponent } from './article-add/article-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    CategorieComponent
+    CategorieComponent,
+    ArticleAddComponent
   ],
   imports: [
     BrowserModule,

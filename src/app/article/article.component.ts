@@ -23,4 +23,7 @@ export class ArticleComponent implements OnInit {
       console.log(this.articles);
     });
   }
+  add(): void {
+    this.router.navigate(['/ajouter-article']);
+  }
 }

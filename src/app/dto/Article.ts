@@ -13,7 +13,7 @@ export interface Article {
 //     private int prixVente;
 //
 //     private enum ETATVENTE {PAS_COMMENCEE, EN_COURS, TERMINEE};
-  noArticle: number;
+  noArticle?: number;
   nomArticle: string;
   description: string;
   dateDebutEncheres: Date;
@@ -23,4 +23,6 @@ export interface Article {
   etatVente: string;
   categorie: Categorie;
   vendeur: Vendeur;
+
+
 }
