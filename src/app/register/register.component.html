@@ -1,0 +1,170 @@
+
+<div id="creeCompte">
+  <h2> Créer un compte</h2>
+</div>
+<form *ngIf="!isSuccessful"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate>
+  <div class="form-group">
+    <label for="pseudo">Pseudo : </label>
+    <input id = "pseudo" type="text" name="pseudo" [(ngModel)]="form.pseudo"
+           required
+           minlength="3"
+           maxlength="20"
+           #pseudo="ngModel"
+    /><br><br>
+<!--    <div class="alert-danger" *ngIf="pseudo.errors && f.submitted">-->
+<!--      <div *ngIf="pseudo.errors.required">Le pseudo est obligatoire</div>-->
+<!--      <div *ngIf="pseudo.errors.minlength">-->
+<!--        Pseudo de 3 caractères minimum !-->
+<!--      </div>-->
+<!--      <div *ngIf="pseudo.errors.maxlength">-->
+<!--        Pseudo mac 20 caractères-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      id = "email"
+      type="email"
+      class="form-control"
+      name="email"
+      [(ngModel)]="form.email"
+      required
+      email
+      #email="ngModel"
+    />
+<!--    <div class="alert-danger" *ngIf="email.errors && f.submitted">-->
+<!--      <div *ngIf="email.errors.required">Email est obligatoire</div>-->
+<!--      <div *ngIf="email.errors.email">-->
+<!--        Ceci n'est pas une adresse mail valide!-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <div class="form-group">
+    <label for="motDePasse">Mot de Passe</label>
+    <input
+      id = "motDePasse"
+      type="motDePasse"
+      class="form-control"
+      name="motDePasse"
+      [(ngModel)]="form.motDePasse"
+      required
+      minlength="6"
+      #motDePasse="ngModel"
+    />
+<!--    <div class="alert-danger" *ngIf="motDePasse.errors && f.submitted">-->
+<!--      <div *ngIf="motDePasse.errors.required">mdp obligatoire</div>-->
+<!--      <div *ngIf="motDePasse.errors.minlength">-->
+<!--        6 caractères minimum-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input
+      id = "nom"
+      type="nom"
+      class="form-control"
+      name="nom"
+      [(ngModel)]="form.nom"
+      required
+      minlength="2"
+      #nom="ngModel"
+    />
+<!--    <div class="alert-danger" *ngIf="nom.errors && f.submitted">-->
+<!--      <div *ngIf="nom.errors.required">nom obligatoire</div>-->
+<!--      <div *ngIf="nom.errors.minlength">-->
+<!--        2 caractères minimum-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <div class="form-group">
+    <label for="prenom">Prenom</label>
+    <input
+      id="prenom"
+      type="prenom"
+      class="form-control"
+      name="prenom"
+      [(ngModel)]="form.prenom"
+      required
+      minlength="2"
+      #prenom="ngModel"
+    />
+<!--    <div class="alert-danger" *ngIf="prenom.errors && f.submitted">-->
+<!--      <div *ngIf="prenom.errors.required">prenom obligatoire</div>-->
+<!--      <div *ngIf="prenom.errors.minlength">-->
+<!--        2 caractères minimum-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <div class="form-group">
+    <label for="rue">Rue</label>
+    <input
+      id = "rue"
+      type="rue"
+      class="form-control"
+      name="rue"
+      [(ngModel)]="form.rue"
+      required
+      minlength="6"
+      #rue="ngModel"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="codePostal">codePostal</label>
+    <input
+      id="codePostal"
+      type="codePostal"
+      class="form-control"
+      name="codePostal"
+      [(ngModel)]="form.codePostal"
+      required
+      minlength="5"
+      #codePostal="ngModel"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="ville">ville</label>
+    <input
+      id="ville"
+      type="ville"
+      class="form-control"
+      name="ville"
+      [(ngModel)]="form.ville"
+      required
+      minlength="5"
+      #ville="ngModel"
+    />
+  </div>
+  <div class="form-group">
+    <button class="">S'enregistrer</button>
+  </div>
+  <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+    L'enregistrement n'a pas fonctionné<br />{{ errorMessage }}
+  </div>
+</form>
+<div class="alert alert-success" *ngIf="isSuccessful">
+  Vous vous êtes bien enregistré.
+</div>
+
+
+
+
+
+
+
+
+
+
+

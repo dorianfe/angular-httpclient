@@ -12,6 +12,7 @@ export class RestService {
   endpoint = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) {
+
   }
 
 //to extract non-typed-response
